@@ -7,7 +7,7 @@
             name="viewport"
             content="width=device-width, minimal-ui, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
         />
-        <!-- <link rel="icon" type="image/png" href="assets/favicon.png" /> -->
+        <link rel="icon" type="image/png" href="assets/favicon.png" />
 
         <title>GL Playground</title>
         <link href="assets/main.css" rel="stylesheet" />
@@ -54,7 +54,8 @@
             });
 
             function updateExample(e) {
-                let src = e.target.href.split('examples/')[1];
+                let src = 'first-example.html';
+                // let src = e.target.href.split('examples/')[1];
 
                 // Allow user to cmd/ctrl + click to open in new tab
                 if (e.metaKey) {
