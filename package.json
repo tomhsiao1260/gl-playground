@@ -1,0 +1,26 @@
+{
+    "name": "gl-playground",
+    "version": "0.0.1",
+    "description": "A personal WebGL experimental playground",
+    "home": "http://tomhsiao1260.github.io/gl-playground/",
+    "scripts": {
+        "dev": "cd dist && python3 -m http.server",
+        "deploy": "gh-pages -d dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TomHsiao1260/gl-playground.git"
+    },
+    "author": {
+        "name": "Hsiao Yao",
+        "email": "tomtogo1260@gmail.com",
+        "url": "https://twitter.com/YTaBQSlVXl0AVC8"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TomHsiao1260/gl-playground/issues"
+    },
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
+    }
+}
