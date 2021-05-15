@@ -14,11 +14,12 @@
     </head>
     <body>
         <div class="Side">
-            <a class="Title" href="https://tomhsiao1260.github.io/gl-playground/">GL Playground</a>
+            <a class="Title" href="">GL Playground</a>
             <div class="SubTitle">Examples</div>
 
             <div class="Section">Section</div>
             <a class="Example" href="first-example.html">First Example</a>
+            <a class="Example" href="second-example.html">Second Example</a>
         </div>
 
         <iframe class="Iframe" allow="autoplay" src=""></iframe>
@@ -31,7 +32,7 @@
             const toggleLink = document.querySelector('.SideIcon');
             const exampleLinks = document.querySelectorAll('a.Example');
             const iFrame = document.querySelector('.Iframe');
-            const sourcePath = 'https://tomhsiao1260.github.io/gl-playground/';
+            const sourcePath = 'https://github.com/TomHsiao1260/gl-playground/blob/main/dist/';
 
             toggleLink.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -54,8 +55,7 @@
             });
 
             function updateExample(e) {
-                let src = 'first-example.html';
-                // let src = e.target.href.split('examples/')[1];
+                let src = e.target.href.match(/([^\/]+html)$/)[0];
 
                 // Allow user to cmd/ctrl + click to open in new tab
                 if (e.metaKey) {
