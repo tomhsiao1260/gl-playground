@@ -2,7 +2,7 @@
     "name": "gl-playground",
     "version": "0.0.1",
     "description": "A personal WebGL experimental playground",
-    "home": "http://tomhsiao1260.github.io/gl-playground/",
+    "home": "https://tomhsiao1260.github.io/gl-playground/",
     "scripts": {
         "dev": "http-server dist",
         "deploy": "gh-pages -d dist"
