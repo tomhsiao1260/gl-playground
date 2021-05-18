@@ -18,8 +18,8 @@
             <div class="SubTitle">Examples</div>
 
             <div class="Section">Section</div>
-            <a class="Example" href="first-example.html">First Example</a>
-            <a class="Example" href="second-example.html">Second Example</a>
+            <a class="Example" href="examples/jellyfish">Jellyfish</a>
+            <a class="Example" href="examples/cube">Cube</a>
         </div>
 
         <iframe class="Iframe" allow="autoplay" src=""></iframe>
@@ -32,7 +32,7 @@
             const toggleLink = document.querySelector('.SideIcon');
             const exampleLinks = document.querySelectorAll('a.Example');
             const iFrame = document.querySelector('.Iframe');
-            const sourcePath = 'https://github.com/TomHsiao1260/gl-playground/blob/main/dist/';
+            const sourcePath = 'https://github.com/TomHsiao1260/gl-playground/blob/main/dist/examples/';
 
             toggleLink.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -42,8 +42,8 @@
             // Load query example in iFrame if linked
             let loadQuery = location.search.split('src=');
             if (loadQuery[1]) {
-                iFrame.src = loadQuery[1];
-                sourceLink.href = sourcePath + loadQuery[1];
+                iFrame.src = 'examples/' + loadQuery[1];
+                sourceLink.href = sourcePath + loadQuery[1] + '/index.html';
             } else {
                 // choose random example to show if none linked
                 let target = exampleLinks[Math.floor(Math.random() * exampleLinks.length)];
@@ -55,7 +55,7 @@
             });
 
             function updateExample(e) {
-                let src = e.target.href.match(/([^\/]+html)$/)[0];
+                let src = e.target.href.match(/([^\/]+)$/)[0];
 
                 // Allow user to cmd/ctrl + click to open in new tab
                 if (e.metaKey) {
@@ -64,7 +64,7 @@
                 }
 
                 iFrame.src = e.target.href;
-                sourceLink.href = sourcePath + src;
+                sourceLink.href = sourcePath + src + '/index.html';
 
                 // Update search query
                 history.pushState(null, null, `${location.origin}${location.pathname}?src=${src}`);
