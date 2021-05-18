@@ -11,4 +11,4 @@ void main() {
     gl_FragColor  = texture2D(uTexture, gl_PointCoord);
     gl_FragColor *= vec4(color, 1.0);
 }
-`
+`;

@@ -1,13 +1,19 @@
 export default `
 
-uniform float uTime;         // normalized progress time 
-uniform float uSize;         // particles size
-varying vec2 vUv;            // UV coordinate
-varying float vBright;       // brightness
+#define PI 3.1415926535897932384626433832795
+
+uniform float uTime;        // normalized progress time 
+uniform float uSize;        // particles size
+uniform float uWidth;       // size of geometry
+
+attribute vec3 aRandomness; // random value for particles
+
+varying vec3 vColor;        // particles color
 
 vec4 permute(vec4 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
 vec2 fade(vec2 t) { return t*t*t*(t*(t*6.0-15.0)+10.0); }
 
+// Classic Perlin 2D Noise
 float cnoise(vec2 P) {
     vec4 Pi = floor(P.xyxy) + vec4(0.0, 0.0, 1.0, 1.0);
     vec4 Pf = fract(P.xyxy) - vec4(0.0, 0.0, 1.0, 1.0);
@@ -40,20 +46,28 @@ float cnoise(vec2 P) {
     return 2.3 * n_xy;
 }
 
-void main() {
-    vec3 pos = position;
-    // this is magic!
-    pos *= cnoise(uv + uTime);
+void main()
+{
+    vec4 modelPosition = modelMatrix * vec4(position, 1.0);
 
-    vec4 modelPosition = modelMatrix * vec4(pos, 1.0);
-    vec4 viewPosition = viewMatrix * modelMatrix * vec4(pos, 1.0);
+    // cnoise positioning
+    vec3  rr = 3.0 * aRandomness;
+    float tt = 1.5 * uTime;
+    float r  = uWidth / 4.0;
+    float xx = cnoise(rr.xy + tt) * r;
+    float yy = cnoise(rr.yz + tt) * r;
+    float zz = cnoise(rr.zx + tt) * r;
+
+    modelPosition.xyz += vec3(xx, yy, zz);
+
+    vec4 viewPosition = viewMatrix * modelPosition;
     vec4 projectedPosition = projectionMatrix * viewPosition;
     gl_Position = projectedPosition;
 
-    gl_PointSize = uSize;
+    // handle particles size
+    gl_PointSize = uSize * 2.0;
     gl_PointSize *= (1.0 / - viewPosition.z);
 
-    vUv = uv;
-    vBright = 1.5 * length(pos) / length(position);
+    vColor = color;
 }
 `;
