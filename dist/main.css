@@ -47,16 +47,16 @@ a {
 
 @font-face {
     font-family: 'Raleway';
-    src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
-        url('fonts/raleway-regular-webfont.woff') format('woff');
+    src: url('assets/fonts/raleway-regular-webfont.woff2') format('woff2'),
+        url('assets/fonts/raleway-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: url('fonts/raleway-bold-webfont.woff2') format('woff2'),
-        url('fonts/raleway-bold-webfont.woff') format('woff');
+    src: url('assets/fonts/raleway-bold-webfont.woff2') format('woff2'),
+        url('assets/fonts/raleway-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -76,6 +76,7 @@ body {
     padding-left: 20px;
     padding-right: 40px;
     background: #fff;
+    z-index: 1;
 }
 .Iframe {
     position: absolute;
@@ -126,7 +127,7 @@ div.Example {
     border-radius: 100%;
     font-size: 19px;
     letter-spacing: -0.1em;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 .CodeIcon {
     bottom: 0;
@@ -135,27 +136,32 @@ div.Example {
 .SideIcon {
     top: 20px;
     left: 245px;
-    display: none;
+    display: block;
+    cursor: pointer;
+}
+
+[data-hideSidebar] .Side {
+    transform: translateX(-100%);
+}
+[data-hideSidebar] .SideIcon {
+    left: 0;
+    transform: rotate(180deg);
+}
+[data-hideSidebar] .Iframe {
+    left: 0;
+    width: 100%;
 }
 
 @media (max-width: 600px) {
     .Side {
-        z-index: 1;
+        width: 200px;
+    }
+    .SideIcon {
+        left: 140px;
     }
     .Iframe {
         left: 0;
         width: 100%;
-    }
-    .SideIcon {
-        display: block;
-    }
-    [data-hideSidebar] .Side {
-        transform: translateX(-100%);
-    }
-    
-    [data-hideSidebar] .SideIcon {
-        left: 0;
-        transform: rotate(180deg);
     }
 }
 
