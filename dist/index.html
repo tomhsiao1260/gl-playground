@@ -19,6 +19,7 @@
 
             <div class="Section">Three.js</div>
             <a class="Example" href="examples/jellyfish">Jellyfish</a>
+            <a class="Example" href="examples/life-of-cube">Life of Cube</a>
 
             <div class="Section">Ongoing</div>
             <a class="Example" href="examples/cube">Cube</a>
@@ -45,7 +46,7 @@
             let loadQuery = location.search.split('src=');
             if (loadQuery[1]) {
                 iFrame.src = 'examples/' + loadQuery[1];
-                sourceLink.href = sourcePath + loadQuery[1] + '/index.html';
+                sourceLink.href = sourcePath + loadQuery[1] + '/main.js';
             } else {
                 // choose random example to show if none linked
                 let target = exampleLinks[Math.floor(Math.random() * exampleLinks.length)];
@@ -66,7 +67,7 @@
                 }
 
                 iFrame.src = e.target.href;
-                sourceLink.href = sourcePath + src + '/index.html';
+                sourceLink.href = sourcePath + src + '/main.js';
 
                 // Update search query
                 history.pushState(null, null, `${location.origin}${location.pathname}?src=${src}`);
