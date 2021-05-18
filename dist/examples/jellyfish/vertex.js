@@ -56,4 +56,4 @@ void main() {
     vUv = uv;
     vBright = 1.5 * length(pos) / length(position);
 }
-`
+`;
