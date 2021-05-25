@@ -10,7 +10,7 @@ const spotTexture = TextureLoader.load('../../assets/spot.png');
 const parameters = {
     width: 1.0, // size of geometry
     speed: 0.3, // progress speed
-    size: 5, // particle size
+    size: 10, // particle size
     counts: 60, // particles number along one side
 };
 
