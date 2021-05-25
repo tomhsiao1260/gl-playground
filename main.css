@@ -158,21 +158,25 @@ div.Example {
     }
     .SideIcon,
     .CodeIcon {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
         font-size: 9px;
     }
     .SideIcon {
         top: 0px;
-        left: 158px;
-    }
-    .CodeIcon {
-        bottom: 0;
-        right: 0;
+        left: 145px;
     }
     .Iframe {
         left: 0;
         width: 100%;
     }
+    [data-hideSidebar] .SideIcon {
+        font-size: 20px;
+        transform: rotate(180deg) scale(0.7);
+        transition: transform 0.5s 0s ease-in-out;
+    }
+    [data-hideSidebar] .CodeIcon {
+        font-size: 18px;
+        transform: scale(0.7);
+        transition: transform 0.5s 0s ease-in-out;
+    }
 }
+

@@ -1,5 +1,5 @@
 import * as THREE from '../../build/three.module.js';
-import { OrbitControls } from '../../build/OrbitControls.js';
+import { TrackballControls } from '../../build/TrackballControls.js';
 
 import vertexShader from './vertex.js';
 import fragmentShader from './fragment.js';
@@ -10,7 +10,7 @@ const spotTexture = TextureLoader.load('../../assets/spot.png');
 const parameters = {
     width: 1.0, // size of geometry
     speed: 0.3, // progress speed
-    size: 10, // particle size
+    size: 5, // particle size
     counts: 60, // particles number along one side
 };
 
@@ -62,9 +62,9 @@ window.addEventListener('resize', () => {
 });
 
 // Controls
-const controls = new OrbitControls(camera, canvas);
-controls.target = new THREE.Vector3();
-controls.enableDamping = true;
+const controls = new TrackballControls(camera, canvas);
+controls.rotateSpeed = 2.0;
+controls.dynamicDampingFactor = 0.1;
 
 // Tick
 const clock = new THREE.Clock();

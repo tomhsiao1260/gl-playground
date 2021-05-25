@@ -9,6 +9,6 @@ void main() {
     vec3 color = vec3(vUv, 1.0) * vBright;
 
     gl_FragColor  = texture2D(uTexture, gl_PointCoord);
-    gl_FragColor *= vec4(color, 0.35);
+    gl_FragColor *= vec4(color, 0.8);
 }
 `;
