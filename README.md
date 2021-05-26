@@ -8,7 +8,7 @@ GL Playground | <a href="http://tomhsiao1260.github.io/gl-playground/" target="_
 
 ## Introduction
 
-This is my personal [WebGL](https://github.com/KhronosGroup/WebGL) and [Three.js](https://threejs.org/) experimental playground. This is not only a space for me to create some cool things but also a place to share my works which mainly using [GLSL shading language](https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)). All the examples I wrote are open source and can be found [here](https://github.com/TomHsiao1260/gl-playground/tree/main/dist/examples). Feel free to use them in your own projects. You can also fork this repository and come back to see more examples released in the future. If you like my works, giving me a star will drive me to do more 🙌.
+This is my personal [WebGL](https://github.com/KhronosGroup/WebGL) and [Three.js](https://threejs.org/) experimental playground. This is not only a space for me to create some cool things but also a place to share my works which mainly using [GLSL shading language](https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)). All the examples I wrote are open source and can be found [here](https://github.com/TomHsiao1260/gl-playground/tree/main/dist/examples). Feel free to use them in your own projects. You can also fork this repository and come back to see more examples released in the future 🙌
 
 ## Inspiration
 
@@ -18,3 +18,12 @@ I also collect some useful resources for me to learn or get more inspiration.
 - [Etienne Jacob](https://twitter.com/etiennejcb)
 - [Zach Lieberman](https://twitter.com/zachlieberman)
 - [WebGL water](https://github.com/evanw/webgl-water)
+
+## Notes
+
+If you like my works, giving me a star will drive me to do more 🙌
+
+Welcome to send me an issue or e-mail for any questions.
+
+e-mail: tomtogo1260@gmail.com
+
