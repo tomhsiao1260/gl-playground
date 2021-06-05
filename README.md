@@ -14,12 +14,21 @@ You can also check out the [demo pages](http://tomhsiao1260.github.io/gl-playgro
 
 ## Inspiration
 
-I also collect some useful resources for me to learn or get more inspiration.
+I also collect some useful resources for me to get more inspiration.
 
-- [Fluid Simulation](http://jamie-wong.com/2016/08/05/webgl-fluid-simulation/)
 - [Etienne Jacob](https://twitter.com/etiennejcb)
 - [Zach Lieberman](https://twitter.com/zachlieberman)
+- [Create Coding](https://www.notion.so/Creative-coding-algorithms-techniques-c5550ef2f7574126bdc77b09ed76651b)
 - [WebGL water](https://github.com/evanw/webgl-water)
+
+## Learn
+
+Some interesting learning resources.
+
+- [Fluid Simulation](http://jamie-wong.com/2016/08/05/webgl-fluid-simulation/)
+- [Trois](https://github.com/troisjs/trois)
+- [ASCII Art](https://github.com/ertdfgcvb/play.core)
+- [Kinetic Typography](https://tympanus.net/codrops/2020/06/02/kinetic-typography-with-three-js/)
 
 ## Notes
 
