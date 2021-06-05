@@ -17,18 +17,24 @@ You can also check out the [demo pages](http://tomhsiao1260.github.io/gl-playgro
 I also collect some useful resources for me to get more inspiration.
 
 - [Etienne Jacob](https://twitter.com/etiennejcb)
-- [Zach Lieberman](https://twitter.com/zachlieberman)
 - [Create Coding](https://www.notion.so/Creative-coding-algorithms-techniques-c5550ef2f7574126bdc77b09ed76651b)
+- [ASCII Art](https://github.com/ertdfgcvb/play.core)
 - [WebGL water](https://github.com/evanw/webgl-water)
+- [Zach Lieberman](https://twitter.com/zachlieberman)
+- [Trois](https://github.com/troisjs/trois)
+- [Bubbles](https://www.youtube.com/watch?v=s10_oyYPPwY&ab_channel=FedericoMarino)
 
 ## Learn
 
 Some interesting learning resources.
 
+- [Book of Shaders](https://thebookofshaders.com/)
 - [Fluid Simulation](http://jamie-wong.com/2016/08/05/webgl-fluid-simulation/)
-- [Trois](https://github.com/troisjs/trois)
-- [ASCII Art](https://github.com/ertdfgcvb/play.core)
 - [Kinetic Typography](https://tympanus.net/codrops/2020/06/02/kinetic-typography-with-three-js/)
+- [Codrops](https://tympanus.net/codrops/category/tutorials/)
+
+<!-- Kinetic Typography: https://www.youtube.com/watch?app=desktop&v=_9Z-YQVQkpE&ab_channel=GitHub -->
+<!-- Tear Photo: https://codepen.io/ste-vg/pen/rNjOgYv?editors=0010 -->
 
 ## Notes
 
