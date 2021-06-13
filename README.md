@@ -36,6 +36,7 @@ Some interesting learning resources.
 <!-- Kinetic Typography: https://www.youtube.com/watch?app=desktop&v=_9Z-YQVQkpE&ab_channel=GitHub -->
 <!-- Tear Photo: https://codepen.io/ste-vg/pen/rNjOgYv?editors=0010 -->
 <!-- string art, GL math equation visualized, Taipei 101 -->
+<!-- https://www.youtube.com/channel/UCsfHquqCOcYC0V78fh1jINA/featured -->
 
 ## Notes
 
